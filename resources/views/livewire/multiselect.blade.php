@@ -32,15 +32,41 @@
         });
     </script>
     <script type="text/javascript">
-        window.livewire.on('activarSpinner', () => {
- 			console.log('ACTIVAR');   
+        window.livewire.on('activarSpinner', () => {  
  			$(".spinner-boton").removeClass("d-none");   	
         });
     </script>
     <script type="text/javascript">
         window.livewire.on('desactivarSpinner', () => {
-			console.log('DESACTIVAR');
 			$(".spinner-boton").addClass("d-none");
         });
-    </script>    
+    </script> 
+    <script type="text/javascript">
+        window.livewire.on('alertaOk', texto => {
+            Swal.fire({
+                toast: true,
+                position: 'bottom-end',
+                icon: 'success',
+                title: texto,
+                showConfirmButton: false,
+                timer: 5000,
+                background: '#38c172',
+                iconColor: '#fff'
+            })   
+        });
+    </script>
+    <script type="text/javascript">
+        window.livewire.on('alertaError', texto => {
+            Swal.fire({
+                toast: true,
+                position: 'bottom-end',
+                icon: 'error',
+                title: texto,
+                showConfirmButton: false,
+                timer: 5000,
+                background: '#e3342f',
+                iconColor: '#fff'
+            })   
+        });
+    </script>  
 @endpush

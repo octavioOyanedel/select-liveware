@@ -68,6 +68,7 @@ class Multiselect extends Component
 		]);     	
 
 		$this->emit('cerrarModal');
+		$this->emit('alertaOk', 'División Agregada.');
     }
 
     public function guardarBatallon()
@@ -84,6 +85,7 @@ class Multiselect extends Component
 		]);     	
 
 		$this->emit('cerrarModal');
+		$this->emit('alertaError', 'Batallón Agregado.');
     }
 
     public function guardarRegimiento()
@@ -103,7 +105,7 @@ class Multiselect extends Component
 		]);   
 
 		$this->emit('desactivarSpinner');
-
 		$this->emit('cerrarModal');
+		$this->emit('alertaOk', 'Regimiento Agregado.');
     }       
 }

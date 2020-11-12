@@ -17,4 +17,9 @@ mix.js('resources/js/app.js', 'public/js')
 
 mix.scripts([
     'resources/js/iconos.js',
+    'resources/js/sweet_alert2.js',
 ], 'public/js/all.js');
+
+mix.styles([
+    'resources/css/app.css',
+], 'public/css/all.css');

@@ -21,11 +21,4 @@
         </div>
     </div>
 </div>
-@push('scripts')
-    <script type="text/javascript">
-        window.livewire.on('limpiarDivisionForm', () => {
-            $('#nuevaDivision').text('');
-        });
-    </script>
-@endpush
 @endsection
