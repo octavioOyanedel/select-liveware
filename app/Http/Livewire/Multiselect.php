@@ -12,10 +12,15 @@ class Multiselect extends Component
 {
 
 	// Variables de formulario principal
+	public $divisiones = [];
 	public $division;
+
 	public $batallones = [];
 	public $batallon;
-	public $regimientos = [];	
+
+	public $regimientos = [];
+
+	public $colecciones = [];
 
 	// Variables desde ventanas modales 
 	public $nueva_division_modal;
@@ -24,6 +29,8 @@ class Multiselect extends Component
 
     public function render()
     {
+    	$this->divisiones = Division::orderBy('name', 'ASC')->get();
+
     	if (!empty($this->division)) {
     		$this->batallones = Battalion::where('division_id', $this->division)->get();
     	}
@@ -33,10 +40,13 @@ class Multiselect extends Component
     		->where('battalion_id', $this->batallon)->get();
     	}
 
+    	$this->colecciones = ['divisiones' => $this->divisiones, 'batallones' => $this->batallones, 'regimientos' => $this->regimientos];
+
         return view('livewire.multiselect', [
-        	'divisiones' => Division::orderBy('name', 'ASC')->get(),
+        	'divisiones' => $this->divisiones,
         	'batallones' => $this->batallones,
-        	'regimientos' => $this->regimientos
+        	'regimientos' => $this->regimientos,
+        	'colecciones' => $this->colecciones
         ]);
     }
 
