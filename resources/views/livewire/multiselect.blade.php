@@ -1,39 +1,12 @@
 <div>
 	{{-- select división --}}
-	<div class="form-group">
-	    <label for="division"><span>División</span></label>
-	    <a class="text-primary float-right" href="#" data-toggle="modal" data-target="#modalDivision" wire:click="limpiarModalForm"><i role="button" class="fas fa-plus-circle"></i></a>	     
-		<select class="form-control" id="division" wire:model="division">
-			<option value="" selected>...</option>
-			@foreach($divisiones as $item)
-				<option value="{{ $item->id }}">{{ $item->name }}</option>			
-			@endforeach
-		</select>
-	</div>
+	<x-select-modal label="División" idModal="#modalDivision" id="division" wireModel="division" :colecciones="$colecciones" key="divisiones"/>
 
 	{{-- select batallón --}}
-	<div class="form-group">
-	    <label for="batallon"><span>Batallón</span></label>
-	    <a class="text-primary float-right" href="#" data-toggle="modal" data-target="#modalBatallon" wire:click="limpiarModalForm"><i role="button" class="fas fa-plus-circle"></i></a>
-	    <select class="form-control" id="batallon" wire:model="batallon">
-			<option value="" selected>...</option>
-			@foreach($batallones as $item)
-				<option value="{{ $item->id }}">{{ $item->name }}</option>			
-			@endforeach
-	    </select>
-	</div>
+	<x-select-modal label="Batallón" idModal="#modalBatallon" id="batallon" wireModel="batallon" :colecciones="$colecciones" key="batallones"/>	
 
 	{{-- select regimiento --}}
-	<div class="form-group">
-	    <label for="regimiento"><span>Regimiento</span></label>
-	    <a class="text-primary float-right" href="#" data-toggle="modal" data-target="#modalRegimiento" wire:click="limpiarModalForm"><i role="button" class="fas fa-plus-circle"></i></a>
-	    <select class="form-control" id="regimiento">
-	      <option value="" selected>...</option>
-			@foreach($regimientos as $item)
-				<option value="{{ $item->id }}">{{ $item->name }}</option>			
-			@endforeach	      
-	    </select>
-	</div>
+	<x-select-modal label="Regimiento" idModal="#modalRegimiento" id="regimiento" wireModel="regimiento" :colecciones="$colecciones" key="regimientos"/>	
 
 	{{-- modal nueva división --}}
 	<x-modal idModal="modalDivision" labelModal="modalDivisionLabel" titulo="Nueva División" wireClick="guardarDivision" colecciones=""/>
@@ -58,4 +31,16 @@
             $('#modalRegimiento').modal('hide');
         });
     </script>
+    <script type="text/javascript">
+        window.livewire.on('activarSpinner', () => {
+ 			console.log('ACTIVAR');   
+ 			$(".spinner-boton").removeClass("d-none");   	
+        });
+    </script>
+    <script type="text/javascript">
+        window.livewire.on('desactivarSpinner', () => {
+			console.log('DESACTIVAR');
+			$(".spinner-boton").addClass("d-none");
+        });
+    </script>    
 @endpush

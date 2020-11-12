@@ -27,7 +27,11 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-					<button type="button" class="btn btn-primary" wire:click="{{ $wireClick }}">Guardar</button>
+					<button type="button" class="btn btn-primary" wire:click="{{ $wireClick }}">Guardar
+						<div class="spinner-boton spinner-border spinner-border-sm d-none" role="status">
+							<span class="sr-only">Loading...</span>
+						</div>
+					</button>
 				</div>
 			</div>
 		</div>

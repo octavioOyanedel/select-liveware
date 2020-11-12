@@ -19,6 +19,7 @@ class Multiselect extends Component
 	public $batallon;
 
 	public $regimientos = [];
+	public $regimiento;
 
 	public $colecciones = [];
 
@@ -86,19 +87,22 @@ class Multiselect extends Component
     }
 
     public function guardarRegimiento()
-    {
-
+    { 	
 		$this->validate([
 			'division' => 'required',
 			'batallon' => 'required',
 			'nuevo_regimiento_modal' => 'required'	
 		]);
 
+		$this->emit('activarSpinner');
+
 		Regiment::create([
 			'name' => $this->nuevo_regimiento_modal,
 			'division_id' => $this->division,
 			'battalion_id' => $this->batallon
-		]);     	
+		]);   
+
+		$this->emit('desactivarSpinner');
 
 		$this->emit('cerrarModal');
     }       
