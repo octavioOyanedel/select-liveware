@@ -14,6 +14,10 @@
                         </div>
                     @endif
 
+                    <div class="form-group">
+                        <a href="{{ route('export') }}" class="btn btn-success form-control"><i class="fas fa-file-excel"></i> Exportar </a>
+                    </div>
+                    
                     <livewire:multiselect />
 
                 </div>
