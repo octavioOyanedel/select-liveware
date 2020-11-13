@@ -11,4 +11,11 @@ class Regiment extends Model
 
     protected $guarded = [];
 
+    /**
+     * Get the comments for the blog post.
+     */
+    public function battalion()
+    {
+        return $this->belongsTo('App\Models\Battalion');
+    }
 }
