@@ -35,5 +35,6 @@ class Regiment extends Model
     	$dt = new Carbon($value);
     	//dd($dt->toDayDateTimeString());
 	    return $dt->toDayDateTimeString();
+	    //return $dt->diffForHumans();
     }
 }
