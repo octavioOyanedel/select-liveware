@@ -18,4 +18,12 @@ class Regiment extends Model
     {
         return $this->belongsTo('App\Models\Battalion');
     }
+
+    /**
+     * Get the comments for the blog post.
+     */
+    public function division()
+    {
+        return $this->belongsToThrough('App\Models\Division','App\Models\Battalion');
+    }    
 }
