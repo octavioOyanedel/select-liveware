@@ -2,12 +2,14 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Support\Carbon;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Regiment extends Model
 {
     use HasFactory;
+	use \Znck\Eloquent\Traits\BelongsToThrough;
 
     protected $guarded = [];
 
@@ -26,4 +28,12 @@ class Regiment extends Model
     {
         return $this->belongsToThrough('App\Models\Division','App\Models\Battalion');
     }    
+
+    public function getCreatedAtAttribute($value)
+    {
+    	//dd($value);
+    	$dt = new Carbon($value);
+    	//dd($dt->toDayDateTimeString());
+	    return $dt->toDayDateTimeString();
+    }
 }

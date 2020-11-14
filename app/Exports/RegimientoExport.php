@@ -30,8 +30,7 @@ class RegimientoExport implements FromCollection, WithHeadings
     public function collection()
     {
     	// El método collection debe retornar una colección
-        // return $this->formatoColeccion();
-		dd($this->formatoColeccion());
+        return $this->formatoColeccion();
     }
     /**
     * Descripción: formatea colección de regimientos para ser exportada a excel
@@ -40,12 +39,9 @@ class RegimientoExport implements FromCollection, WithHeadings
     */
     public function formatoColeccion(){
 
-    	$coleccion_regimientos = new Collection;
+    	// Colección genérica
+    	$coleccion = new Collection;
 
-    	// Obtener divisiones
-    	$divisiones = Division::select('id', 'name')->get();
-    	// Obtener batallones
-    	$batallones = Battalion::select('id', 'name')->get();
     	// Obtener regimientos
     	$regimientos = Regiment::all();
 
@@ -56,10 +52,10 @@ class RegimientoExport implements FromCollection, WithHeadings
     		$regimiento['name'] = $r->name;
     		$regimiento['battalion_id'] = $r->battalion->name;
     		$regimiento['division_id'] = $r->division->name;
-        	$regimiento['created_at'] = $r->created_at->format('d-m-Y');
-        	$regimiento['updated_at'] = $r->updated_at->format('d-m-Y'); 
-        	$coleccion_regimientos->push($regimiento);
+        	$regimiento['created_at'] = $r->created_at;
+        	$regimiento['updated_at'] = $r->updated_at;
+        	$coleccion->push($regimiento);
     	}
-    	return $coleccion_regimientos;
+    	return $coleccion;
     }
 }

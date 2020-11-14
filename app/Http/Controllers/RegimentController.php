@@ -11,7 +11,6 @@ class RegimentController extends Controller
 {
     public function export() 
     {
-    	//dd(Regiment::all()->first()->created_at->format('d-m-Y'));
         return Excel::download(new RegimientoExport, 'regimientos.xlsx');
     }
 }
