@@ -19,8 +19,8 @@ class RegimientoExport implements FromCollection, WithHeadings
 			'Regimientos',
 			'Batallones',
 			'Divisiones',
-			'Creado en',
-			'Actualizado en'
+			'Fecha Creación',
+			'Última Actualización'
 		];
 	}
 

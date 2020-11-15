@@ -31,10 +31,7 @@ class Regiment extends Model
 
     public function getCreatedAtAttribute($value)
     {
-    	//dd($value);
-    	$dt = new Carbon($value);
-    	//dd($dt->toDayDateTimeString());
-	    return $dt->toDayDateTimeString();
-	    //return $dt->diffForHumans();
+        // substr quita hora para evitar error
+        return \DateTime::createFromFormat('Y-m-d', substr($value, 0, 10))->format('d-m-Y');
     }
 }
