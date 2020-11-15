@@ -34,4 +34,14 @@ class Regiment extends Model
         // substr quita hora para evitar error
         return \DateTime::createFromFormat('Y-m-d', substr($value, 0, 10))->format('d-m-Y');
     }
+
+    /**
+     * scope busqueda general
+     */
+    public function scopeGeneral($query, $q, $campo)
+    {
+        if ($q) {
+            return $query->orWhere($campo, 'LIKE', "%$q%");
+        }
+    }     
 }

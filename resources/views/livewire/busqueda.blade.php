@@ -40,43 +40,16 @@
 		{{-- CARD RESULTADOS --}}
 		<div class="col-md-12 col-lg-8">
 			<div class="card">
-                <div class="card-header"><span>Resultados búsqueda</span></div>
+                <div class="card-header"><span><mark>Resultados búsqueda</mark>Resultados búsqueda</span></div>
                 <div class="card-body">
                 {{-- SELECCION DE TABLAS --}}
                 @switch($criterio)
                     @case(null)
                         @break
 					@case('1')
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>						
+						@if($coleccion)
+							@include("partials.tablas.busqueda._todos", ['coleccion' => $coleccion])	
+						@endif
 						@break
 					@case('2')
 						DIVISIÓN

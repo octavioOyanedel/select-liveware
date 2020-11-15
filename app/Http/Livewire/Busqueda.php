@@ -23,15 +23,35 @@ class Busqueda extends Component
 
     public function buscarEnTodos()
     {
+		// $this->validate([
+		// 	'nombre' => 'required'
+		// ]);  
+			
     	$this->coleccion = new Collection;
 
-    	$divisiones = Division::orderBy('name','ASC')->get();
-    	$batallones = Battalion::orderBy('name','ASC')->get();
-    	$regimientos = Regiment::orderBy('name','ASC')->get();
+    	$divisiones = Division::orderBy('name','ASC')
+    	->general($this->nombre, 'name')
+    	->general($this->fecha, 'created_at')
+    	->get();
+
+    	$batallones = Battalion::orderBy('name','ASC')
+    	->general($this->nombre, 'name')
+    	->general($this->fecha, 'created_at')
+    	->get();
+
+    	$regimientos = Regiment::orderBy('name','ASC')
+    	->general($this->nombre, 'name')
+    	->general($this->fecha, 'created_at')
+    	->get();    	
 
     	//dd($this->nombre.' - '.$this->fecha);
 
     	$this->poblarColeccion($divisiones, $this->coleccion);
+    	$this->poblarColeccion($batallones, $this->coleccion);
+    	$this->poblarColeccion($regimientos, $this->coleccion);
+
+    	//$this->coleccion->paginate();
+
     }
 
     public function poblarColeccion($objetos, &$coleccion)

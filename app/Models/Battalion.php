@@ -25,5 +25,15 @@ class Battalion extends Model
     public function division()
     {
         return $this->belongsTo('App\Models\Division');
-    }    
+    }
+
+    /**
+     * scope busqueda general
+     */
+    public function scopeGeneral($query, $q, $campo)
+    {
+        if ($q) {
+            return $query->orWhere($campo, 'LIKE', "%$q%");
+        }
+    }     
 }

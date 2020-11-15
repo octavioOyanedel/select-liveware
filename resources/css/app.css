@@ -7,3 +7,10 @@
 	font-size: 14px !important;
 	font-weight: 200 !important;
 }
+
+/*
+ * Tablas
+ */
+table tbody td, table thead th{
+    white-space: nowrap !important;
+}

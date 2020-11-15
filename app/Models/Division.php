@@ -26,4 +26,14 @@ class Division extends Model
     {
         return $this->hasManyThrough('App\Models\Regiment', 'App\Models\Battalion');
     }  
+
+    /**
+     * scope busqueda general
+     */
+    public function scopeGeneral($query, $q, $campo)
+    {
+        if ($q) {
+            return $query->orWhere($campo, 'LIKE', "%$q%");
+        }
+    } 
 }
