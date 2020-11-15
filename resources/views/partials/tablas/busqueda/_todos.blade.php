@@ -16,7 +16,8 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ tipoObjeto($objeto) }}</td>
-                            <td>{{ $objeto->name }}</td>
+                            <td>{!! destacarTexto($objeto->name, $nombre) !!}</td>
+                            {{-- <td>{{ $objeto->name }}</td> --}}
                             <td>{{ $objeto->created_at }}</td>
                             <td>ver</td>
                             <td>editar</td>

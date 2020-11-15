@@ -14,3 +14,10 @@
 table tbody td, table thead th{
     white-space: nowrap !important;
 }
+
+/*
+ * Tablas
+ */
+.resaltado{
+    padding: 0px !important;
+}

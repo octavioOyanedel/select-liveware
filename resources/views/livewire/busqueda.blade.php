@@ -40,7 +40,7 @@
 		{{-- CARD RESULTADOS --}}
 		<div class="col-md-12 col-lg-8">
 			<div class="card">
-                <div class="card-header"><span><mark>Resultados búsqueda</mark>Resultados búsqueda</span></div>
+                <div class="card-header"><span>Resultados búsqueda</span></div>
                 <div class="card-body">
                 {{-- SELECCION DE TABLAS --}}
                 @switch($criterio)

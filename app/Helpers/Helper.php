@@ -22,3 +22,10 @@ function tipoObjeto($objeto)
 			break;
 	}
 }
+
+function destacarTexto($texto, $marcar)
+{
+return str_ireplace($marcar, "<mark class='resaltado'>".$marcar."</mark>", $texto);
+
+	
+}
