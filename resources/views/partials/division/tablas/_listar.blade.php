@@ -1,6 +1,8 @@
 <div class="card">
 	<div class="card-header">
-		<h4 class="mb-0">Divisiones</h4>
+		<h4 class="mb-0">Divisiones
+			<a class="float-right" wire:click="mostrarEstadistica" href="#" title="Gráfico estadistico"><i class="fas fa-chart-bar"></i></a>
+		</h4>
 	</div>
 	<div class="card-body">
 		@if ($divisiones->count() > 0)

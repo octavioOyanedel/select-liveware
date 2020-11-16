@@ -95,4 +95,9 @@ class Divisiones extends Component
     	$this->emit('cerrarModal');
     	$this->emit('alertaOk', 'División eliminada.');
     }
+
+    public function mostrarEstadistica()
+    {
+    	$this->tabla = '_grafico';
+    }
 }
