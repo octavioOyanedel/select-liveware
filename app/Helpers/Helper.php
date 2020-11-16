@@ -25,7 +25,6 @@ function tipoObjeto($objeto)
 
 function destacarTexto($texto, $marcar)
 {
-return str_ireplace($marcar, "<mark class='resaltado'>".$marcar."</mark>", $texto);
-
-	
+	$marcado = substr($texto, stripos($texto, $marcar), strlen($marcar));
+	return str_ireplace($marcar, "<mark class='resaltado'>".$marcado."</mark>", $texto);	
 }
