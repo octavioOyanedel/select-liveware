@@ -14,7 +14,9 @@ class Divisiones extends Component
 
 	public $form = "_crear";
 	public $tabla = "_listar";
-	public $division;
+	public $division; // objeto 
+	public $nombre;
+	public $division_id;
 
     public function render()
     {  	
@@ -23,14 +25,61 @@ class Divisiones extends Component
         ]);
     }
 
-    public function mostrar(Division $d)
+    public function mostrarTablaDivision(Division $d)
     {
     	$this->tabla = '_mostrar';
     	$this->division = $d;
     }
 
-    public function listar()
+    public function mostrarFormEditar(Division $d)
+    {
+    	$this->nombre = '';
+    	$this->form = '_editar';
+    	$this->division_id = $d->id;
+    	$this->nombre = $d->name;
+    }
+
+    public function mostrarFormCrear()
+    {
+    	$this->nombre = '';
+
+    	$this->form = '_crear';
+    }
+
+    public function mostrarTablaListado()
     {
     	$this->tabla = '_listar';
     }    
+
+    public function editar()
+    {
+		$this->validate([
+			'nombre' => 'required'
+		]);
+
+		$division = Division::findOrFail($this->division_id);
+		$division->update([
+			'name' => $this->nombre
+		]);
+
+		$this->nombre = '';
+
+		$this->emit('alertaOk', 'División editada.');
+
+    }
+
+    public function crear()
+    {
+		$this->validate([
+			'nombre' => 'required'
+		]);
+
+		Division::create([
+			'name' => $this->nombre
+		]);  
+
+		$this->nombre = '';
+
+		$this->emit('alertaOk', 'División creada.');
+    }       
 }

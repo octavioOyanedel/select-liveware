@@ -1,7 +1,7 @@
 <div class="card">
 	<div class="card-header">
 		<h4 class="mb-0">Division: {{ $division->name }} 
-			<a class="float-right" wire:click="listar" href="#" title="Ver listado"><i class="fas fa-list"></i></a>
+			<a class="float-right" wire:click="mostrarTablaListado" href="#" title="Ver listado"><i class="fas fa-list"></i></a>
 		</h4>
 		
 	</div>

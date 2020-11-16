@@ -1,5 +1,9 @@
 <div class="card">
-    <div class="card-header"><h4 class="mb-0">Nueva División</h4></div>
+    <div class="card-header">
+    	<h4 class="mb-0">Editar División
+    		<a class="float-right" wire:click="mostrarFormCrear" href="#" title="Crear" title="Agregar"><i class="fas fa-plus"></i></a>
+    	</h4>
+    </div>
 
     <div class="card-body">
 		<div class="form-group">
@@ -10,7 +14,7 @@
 			@enderror
 		</div>
 		<div class="form-group">
-			<button wire:click="crear" type="button" class="form-control btn btn-primary">Guardar</button>
+			<button wire:click="editar" type="button" class="form-control btn btn-primary">Editar</button>
 		</div>      
 	</div>	
 </div>

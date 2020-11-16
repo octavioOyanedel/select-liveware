@@ -13,3 +13,19 @@
 
 	</div>	
 </div>
+@push('scripts')
+	<script type="text/javascript">
+	    window.livewire.on('alertaOk', texto => {
+	        Swal.fire({
+	            toast: true,
+	            position: 'bottom-end',
+	            icon: 'success',
+	            title: texto,
+	            showConfirmButton: false,
+	            timer: 2300,
+	            background: '#38c172',
+	            iconColor: '#fff'
+	        })   
+	    });
+	</script>  
+@endpush

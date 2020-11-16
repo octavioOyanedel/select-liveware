@@ -17,10 +17,10 @@
 					@foreach ($divisiones as $d)                
 						<tr>
 							<td>{{ $d->name }}</td>                            
-							<td>{{ $d->created_at }}</td>
-							<td><a wire:click="mostrar({{ $d->id }})" role="button" class="text-success"><i class="fas fa-eye" title="Ver"></i></a></td>
-							<td><a role="button" class="text-primary"><i class="fas fa-edit"></i></a></td>
-							<td><a role="button" class="text-danger"><i class="fas fa-trash"></i></a></td>
+							<td>{{ $d->created_at->diffForHumans() }}</td>
+							<td><a wire:click="mostrarTablaDivision({{ $d->id }})" role="button" class="text-success"><i class="fas fa-eye" title="Ver"></i></a></td>
+							<td><a wire:click="mostrarFormEditar({{ $d->id }})" role="button" class="text-primary"><i class="fas fa-edit" title="Editar"></i></a></td>
+							<td><a role="button" class="text-danger" title="Eliminar"><i class="fas fa-trash"></i></a></td>
 						</tr>
 					@endforeach
 					</tbody>
