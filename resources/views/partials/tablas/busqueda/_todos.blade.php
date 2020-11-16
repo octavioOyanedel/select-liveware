@@ -18,9 +18,9 @@
                             <td>{{ tipoObjeto($objeto) }}</td>
                             <td>{!! destacarTexto($objeto->name, $nombre) !!}</td>                            
                             <td>{{ $objeto->created_at }}</td>
-                            <td>ver</td>
-                            <td>editar</td>
-                            <td>eliminar</td>
+                            <td><a href="#" class="text-success"><i class="fas fa-eye"></i></a></td>
+                            <td><a href="#" class="text-primary"><i class="fas fa-edit"></i></a></td>
+                            <td><a href="#" class="text-danger"><i class="fas fa-trash"></i></a></td>
                         </tr>
                     @endif
                 @endforeach

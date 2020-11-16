@@ -41,7 +41,7 @@ class Regiment extends Model
     public function scopeGeneral($query, $q, $campo)
     {
         if ($q) {
-            return $query->orWhere($campo, 'LIKE', "%$q%");
+            return $query->where($campo, 'LIKE', "%$q%");
         }
     }     
 }
