@@ -1,5 +1,7 @@
 <div class="card">
-	<div class="card-header"><h4 class="mb-0">Divisiones</h4></div>
+	<div class="card-header">
+		<h4 class="mb-0">Divisiones</h4>
+	</div>
 	<div class="card-body">
 		@if ($divisiones->count() > 0)
 			<div class="table-responsive">
@@ -16,14 +18,18 @@
 						<tr>
 							<td>{{ $d->name }}</td>                            
 							<td>{{ $d->created_at }}</td>
-							<td><a href="#" class="text-success"><i class="fas fa-eye"></i></a></td>
-							<td><a href="#" class="text-primary"><i class="fas fa-edit"></i></a></td>
-							<td><a href="#" class="text-danger"><i class="fas fa-trash"></i></a></td>
+							<td><a wire:click="mostrar({{ $d->id }})" role="button" class="text-success"><i class="fas fa-eye" title="Ver"></i></a></td>
+							<td><a role="button" class="text-primary"><i class="fas fa-edit"></i></a></td>
+							<td><a role="button" class="text-danger"><i class="fas fa-trash"></i></a></td>
 						</tr>
 					@endforeach
 					</tbody>
 				</table>
-				{{ $divisiones->links() }}
+
+				<div class="float-right">
+					{{ $divisiones->links() }}
+				</div>
+				
 			</div>
 		@else
 			<div class="alert alert-warning" role="alert">

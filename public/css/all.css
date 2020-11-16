@@ -11,7 +11,7 @@
 /*
  * Tablas
  */
-table tbody td, table thead th{
+table tbody td, table thead th, table tbody tr th{
     white-space: nowrap !important;
 }
 
