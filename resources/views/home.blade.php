@@ -2,8 +2,11 @@
 
 @section('content')
 <div class="container">
-    {{-- FILA BUSCADOR --}}
 
+    {{-- FILA MÓDULO --}}
+    <livewire:divisiones />
+
+    {{-- FILA BUSCADOR --}}
     <livewire:busqueda />
 
     {{-- FILA MULTI SELECT --}}
