@@ -81,5 +81,18 @@ class Divisiones extends Component
 		$this->nombre = '';
 
 		$this->emit('alertaOk', 'División creada.');
-    }       
+    }    
+
+    public function mostrarModalEliminar(Division $d)
+    {
+    	$this->division_id = $d->id;
+    	$this->emit('abrirModal');
+    }   
+
+    public function eliminar()
+    {
+    	Division::destroy($this->division_id);
+    	$this->emit('cerrarModal');
+    	$this->emit('alertaOk', 'División eliminada.');
+    }
 }

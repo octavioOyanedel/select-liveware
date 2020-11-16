@@ -14,6 +14,16 @@
 	</div>	
 </div>
 @push('scripts')
+    <script type="text/javascript">
+        window.livewire.on('abrirModal', () => {
+            $('#modalEliminar').modal('show');
+        });
+    </script>
+    <script type="text/javascript">
+        window.livewire.on('cerrarModal', () => {
+            $('#modalEliminar').modal('hide');
+        });
+    </script>    
 	<script type="text/javascript">
 	    window.livewire.on('alertaOk', texto => {
 	        Swal.fire({
