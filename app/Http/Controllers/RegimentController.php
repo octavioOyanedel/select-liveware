@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Regiment;
 use Illuminate\Http\Request;
 use App\Exports\RegimientoExport;
 use Maatwebsite\Excel\Facades\Excel;
