@@ -28,12 +28,12 @@
 			        }]
 			    },
 
-			    // Configuration options go here
+			    // Comienza desde 0
 			    options: {
 			        scales: {
 			            yAxes: [{
 			                ticks: {
-			                    beginAtZero: true
+			                    beginAtZero: true 
 			                }
 			            }]
 			        }
