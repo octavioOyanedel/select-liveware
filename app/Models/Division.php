@@ -36,4 +36,12 @@ class Division extends Model
             return $query->where($campo, 'LIKE', "%$q%");
         }
     } 
+
+    /**
+     * scope busqueda general
+     */
+    public static function obtenerIdConNombre($nombre)
+    {
+        return Division::where('name', $nombre)->first()->id;
+    } 
 }

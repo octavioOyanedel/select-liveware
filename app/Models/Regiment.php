@@ -43,5 +43,18 @@ class Regiment extends Model
         if ($q) {
             return $query->where($campo, 'LIKE', "%$q%");
         }
-    }     
+    }
+
+    /**
+     * scope busqueda general
+     */
+    public static function contarRegimientosPorDivision($id)
+    {
+        $suma = Regiment::where('division_id', $id)->count();
+        if($suma != null){
+            return $suma;
+        }else{
+            return 0;
+        }
+    }         
 }

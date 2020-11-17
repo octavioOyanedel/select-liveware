@@ -4,19 +4,27 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Division;
+use App\Models\Regiment;
 use Livewire\WithPagination;
 
 class Divisiones extends Component
 {
 	use WithPagination;
 
+	// corrige error en estilos de paginación
 	protected $paginationTheme = 'bootstrap';
-
+	// nombre de partials para carga de vistas dinámicas
 	public $form = "_crear";
 	public $tabla = "_listar";
-	public $division; // objeto 
+	// objeto para mostrar datos en form editar
+	public $division;  
+	// wire:model
 	public $nombre;
+	// id para editar y eliminar
 	public $division_id;
+	// gráficos
+	public $grafico_divisiones = array();
+	public $grafico_cantidades = array();
 
     public function render()
     {  	
@@ -99,5 +107,11 @@ class Divisiones extends Component
     public function mostrarEstadistica()
     {
     	$this->tabla = '_grafico';
+    	// crear arreglo divisiones
+    	$this->grafico_divisiones = prepararArrayGrafico(array_values(Division::select('name')->orderBy('name', 'ASC')->get()->toArray()));
+    	// crear arreglo con suma de regimientos por divisiones
+    	foreach ($this->grafico_divisiones as $d) { 	
+    		array_push($this->grafico_cantidades, Regiment::contarRegimientosPorDivision(Division::obtenerIdConNombre($d)));
+    	}
     }
 }

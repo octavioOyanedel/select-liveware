@@ -8,24 +8,36 @@
 	<div class="card-body">
 		<canvas id="myChart" width="400" height="400"></canvas>
 		<script>
+			var valores = <?php echo json_encode($grafico_cantidades); ?>;
+			var etiquetas = <?php echo json_encode($grafico_divisiones); ?>;
 			var ctx = document.getElementById('myChart').getContext('2d');
 			var chart = new Chart(ctx, {
 			    // The type of chart we want to create
-			    type: 'line',
+			    //type: 'line',
+			    type: 'bar',
+			    //type: 'horizontalBar',
 
 			    // The data for our dataset
 			    data: {
-			        labels: ['Enero', 'February', 'March', 'April', 'May', 'June', 'July'],
+			        labels: etiquetas,
 			        datasets: [{
-			            label: 'My First dataset',
-			            backgroundColor: 'rgb(255, 99, 132)',
-			            borderColor: 'rgb(255, 99, 132)',
-			            data: [2, 10, 5, 2, 20, 30, 45]
+			            label: 'Regimientos',
+			            backgroundColor: 'rgb(65, 83, 59)',
+			            borderColor: 'rgb(28,34,46)',
+			            data: valores
 			        }]
 			    },
 
 			    // Configuration options go here
-			    options: {}
+			    options: {
+			        scales: {
+			            yAxes: [{
+			                ticks: {
+			                    beginAtZero: true
+			                }
+			            }]
+			        }
+			    }
 			});
 		</script>
 	</div>	

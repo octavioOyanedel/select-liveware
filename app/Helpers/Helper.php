@@ -28,3 +28,13 @@ function destacarTexto($texto, $marcar)
 	$marcado = substr($texto, stripos($texto, $marcar), strlen($marcar));
 	return str_ireplace($marcar, "<mark class='resaltado'>".$marcado."</mark>", $texto);	
 }
+
+function prepararArrayGrafico($arreglo){
+	$arreglo_grafico = array();
+	foreach ($arreglo as $value) {
+		foreach ($value as $info) {
+			array_push($arreglo_grafico, $info);
+		}
+	}
+	return $arreglo_grafico;
+}
