@@ -24,3 +24,5 @@ mix.scripts([
 mix.styles([
     'resources/css/app.css',
 ], 'public/css/all.css');
+
+mix.browserSync('multiselect.test');

@@ -22,9 +22,13 @@ table tbody td, table thead th, table tbody tr th{
     padding: 0px !important;
 }
 
-/*
- * Login
- */
-.contenedor-login{
-    height: 500px;
+.login{
+	width: 350px;
+	height: 350px;
+	/* Center vertically and horizontally */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Poppins', sans-serif;
 }

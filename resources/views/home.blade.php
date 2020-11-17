@@ -7,13 +7,13 @@
     <livewire:login />
     
     {{-- FILA MÓDULO --}}
-    <livewire:divisiones />
+    {{-- <livewire:divisiones /> --}}
 
     {{-- FILA BUSCADOR --}}
-    <livewire:busqueda />
+    {{-- <livewire:busqueda /> --}}
 
     {{-- FILA MULTI SELECT --}}
-    <div class="row justify-content-center mt-4">
+    {{-- <div class="row justify-content-center mt-4">
         <div class="col-sm-12 col-md-6 col-lg-4">
             <div class="card">
                 <div class="card-header"><span>Formulario</span></div>
@@ -34,6 +34,6 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> --}}
 </div>
 @endsection

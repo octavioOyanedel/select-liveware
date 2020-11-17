@@ -1,9 +1,20 @@
 <div>
-    <div class="row">
-    	<div class="col-12 contenedor-login bg-white">
-			<div class="row">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate repellat, totam delectus cupiditate sunt aspernatur velit quasi beatae eos sit, dolores iste, odio quibusdam voluptatum dolorem excepturi ratione nobis! Ducimus.
-			</div>
-    	</div>
-    </div>
+	<div class="login">
+		<div class="form-group text-center">
+			<img src="https://picsum.photos/100/100" class="img-fluid rounded-circle mx-auto shadow" alt="Logo">
+			<h3 class="my-4 modal-title">Ingresar a SIND1</h3>
+		</div>
+
+		<div class="form-group">
+			<input type="email" class="form-control" placeholder="Correo Electrónico" required="required">
+		</div>
+		<div class="form-group">
+			<input type="password" class="form-control" placeholder="Contraseña" required="required">
+		</div>
+		<div class="form-group small clearfix">
+			<label class="checkbox"><input type="checkbox"> Recuérdame</label>
+			<a href="#" class="float-right">¿Olvidó su contraseña?</a>
+		</div> 
+		<button  class="btn bg-dark btn-block btn-lg text-white">Entrar</button>	
+	</div>		
 </div>
