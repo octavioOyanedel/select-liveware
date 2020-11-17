@@ -1,7 +1,7 @@
 <div>
 	<div class="login">
 		<div class="form-group text-center">
-			<img src="https://picsum.photos/100/100" class="img-fluid rounded-circle mx-auto shadow" alt="Logo">
+			<img src="href="{{ asset('img/logo_sin_texto.svg') }}" class="img-fluid rounded-circle mx-auto shadow" alt="Logo">
 			<h3 class="my-4 modal-title">Ingresar a SIND1</h3>
 		</div>
 
