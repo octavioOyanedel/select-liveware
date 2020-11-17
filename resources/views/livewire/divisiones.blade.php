@@ -1,5 +1,5 @@
 <div>	
-	<div class="row">
+	<div class="row mt-4">
 
 		{{-- CARD FORM --}}
 		<div class="col-sm-12 col-md-4">

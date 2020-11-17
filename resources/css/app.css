@@ -21,3 +21,10 @@ table tbody td, table thead th, table tbody tr th{
 .resaltado{
     padding: 0px !important;
 }
+
+/*
+ * Login
+ */
+.contenedor-login{
+    height: 500px;
+}

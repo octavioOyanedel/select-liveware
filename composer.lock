@@ -2912,21 +2912,21 @@
         },
         {
             "name": "staudenmeir/belongs-to-through",
-            "version": "v2.11",
+            "version": "v2.11.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/staudenmeir/belongs-to-through.git",
-                "reference": "266643c617e550f905cd6a7a8c4c26937d808255"
+                "reference": "d300afa1045e6541b79af2291336312613b5cd02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/staudenmeir/belongs-to-through/zipball/266643c617e550f905cd6a7a8c4c26937d808255",
-                "reference": "266643c617e550f905cd6a7a8c4c26937d808255",
+                "url": "https://api.github.com/repos/staudenmeir/belongs-to-through/zipball/d300afa1045e6541b79af2291336312613b5cd02",
+                "reference": "d300afa1045e6541b79af2291336312613b5cd02",
                 "shasum": ""
             },
             "require": {
                 "illuminate/database": "^8.0",
-                "php": "^7.3"
+                "php": "^7.3|^8.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^9.3"
@@ -2958,7 +2958,7 @@
                     "type": "custom"
                 }
             ],
-            "time": "2020-08-19T20:48:30+00:00"
+            "time": "2020-11-16T19:39:09+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

@@ -3,6 +3,9 @@
 @section('content')
 <div class="container">
 
+    {{-- FILA LOGIN --}}
+    <livewire:login />
+    
     {{-- FILA MÓDULO --}}
     <livewire:divisiones />
 
