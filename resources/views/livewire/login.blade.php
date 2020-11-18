@@ -1,7 +1,7 @@
 <div>
 	<div class="login">
 		<div class="form-group text-center">
-			<img src="href="{{ asset('img/logo_sin_texto.svg') }}" class="img-fluid rounded-circle mx-auto shadow" alt="Logo">
+            <img src="\img\sind1.jpg" class="img-logo img-fluid rounded-circle mx-auto shadow" width="100" alt="Logo">
 			<h3 class="my-4 modal-title">Ingresar a SIND1</h3>
 		</div>
 
@@ -14,7 +14,7 @@
 		<div class="form-group small clearfix">
 			<label class="checkbox"><input type="checkbox"> Recuérdame</label>
 			<a href="#" class="float-right">¿Olvidó su contraseña?</a>
-		</div> 
-		<button  class="btn bg-dark btn-block btn-lg text-white">Entrar</button>	
-	</div>		
+		</div>
+		<button  class="btn bg-dark btn-block btn-lg text-white">Entrar</button>
+	</div>
 </div>

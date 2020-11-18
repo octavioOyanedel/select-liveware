@@ -1,5 +1,5 @@
 /*
- * Configuracion base de alertas  
+ * Configuracion base de alertas
  */
 .swal2-title{
 	color: white !important;
@@ -22,6 +22,9 @@ table tbody td, table thead th, table tbody tr th{
     padding: 0px !important;
 }
 
+/*
+ * Centrar div
+ */
 .login{
 	width: 350px;
 	height: 350px;
@@ -31,4 +34,11 @@ table tbody td, table thead th, table tbody tr th{
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-family: 'Poppins', sans-serif;
+}
+
+/*
+ * Fondo imagen logo
+ */
+.img-logo{
+    background-color: #78A775;
 }
