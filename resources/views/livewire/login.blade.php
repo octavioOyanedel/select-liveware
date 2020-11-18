@@ -1,7 +1,7 @@
 <div>
 	<div class="login">
 		<div class="form-group text-center">
-            <img src="\img\sind1.jpg" class="img-logo img-fluid rounded-circle mx-auto shadow" width="100" alt="Logo">
+            <img src="\img\logo_verde.png" class="img-logo img-fluid rounded-circle mx-auto shadow" width="100" alt="Logo">
 			<h3 class="my-4 modal-title">Ingresar a SIND1</h3>
 		</div>
 
