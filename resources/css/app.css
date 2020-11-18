@@ -26,8 +26,8 @@ table tbody td, table thead th, table tbody tr th{
  * Centrar div
  */
 .login{
-	width: 350px;
-	height: 350px;
+	width: 280px;
+	height: 280px;
 	/* Center vertically and horizontally */
 	position: absolute;
 	top: 50%;
