@@ -8,7 +8,7 @@ class Login extends Component
 {
     public $tipo = 'password';
     public $password = '';
-    public $icono = 'ver';
+    public $icono = 'lock';
 
     public function render()
     {
@@ -19,10 +19,10 @@ class Login extends Component
     {
         if ($this->tipo == 'text'){
             $this->tipo = 'password';
-            $this->icono = 'ver';
+            $this->icono = 'lock';
         }else {
             $this->tipo = 'text';
-            $this->icono = 'ocultar';
+            $this->icono = 'unlock';
         }        
     }
 }
