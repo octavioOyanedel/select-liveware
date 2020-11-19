@@ -31268,6 +31268,6 @@ body, select, option, table {
     font-family: 'Poppins', sans-serif;
 }
 
-aside {
+nav, aside {
     font-size: 14px !important;
 }

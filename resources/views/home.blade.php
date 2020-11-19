@@ -7,9 +7,12 @@
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i style="font-size: 18px; margin-top: 4px;" class="fas fa-arrows-alt-h"></i></a>
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i style="font-size: 18px;" class="fas fa-arrows-alt-h"></i></a>
             </li>
+            <li class="nav-item active"><span class="nav-link">Hola, Octavio</span></li>
+
         </ul>
+
         <ul class="navbar-nav ml-auto">
             <li>
                 <a class="nav-link" data-toggle="dropdown" href="#" title="N° Socios">
@@ -35,7 +38,7 @@
                         </a>
                         <ul class="nav nav-treeview">
                             <li class="nav-item">
-                                <a href="#" class="nav-link active"><p>Cargas</p></a>
+                                <a href="#" class="nav-link"><p>Cargas</p></a>
                             </li>
                             <li class="nav-item">
                                 <a href="#" class="nav-link"><p>Estudios</p></a>
