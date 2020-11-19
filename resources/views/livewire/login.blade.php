@@ -8,7 +8,7 @@
 		<div class="form-group">
 			<input type="email" class="form-control shadow-sm" placeholder="Correo Electrónico" required="required">
 		</div>
-		
+
 		<div class="input-group mb-3">
 			<input type="{{$tipo}}" class="form-control shadow-sm" placeholder="Contraseña" required="required" wire:model="password">
 			<div class="input-group-append shadow-sm">
